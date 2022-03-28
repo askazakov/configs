@@ -117,9 +117,9 @@
       ]
     },
     {
+      "description": "Tab as fn",
       "manipulators": [
         {
-          "description": "Tab as fn",
           "from": {
             "key_code": "tab",
             "modifiers": {
