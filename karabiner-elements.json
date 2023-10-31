@@ -26,6 +26,31 @@
       ]
     },
     {
+      "description": "Change Tab + P to backspace",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "option",
+                "fn"
+              ],
+              "optional":[
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
       "description": "Change Tab + H/J/K/L to Arrow Keys",
       "manipulators": [
         {
