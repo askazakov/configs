@@ -1,164 +1,119 @@
 {
-  "title": "Tab + HJKL",
   "rules": [
     {
-      "description": "Change Tab to fake modified key",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "tab"
-          },
-          "to": [
+        "description": "Change caps_lock to command+control+option",
+        "manipulators": [
             {
-              "key_code": "fn",
-              "modifiers": [
-                "left_option"
-              ]
+                "from": {
+                    "key_code": "caps_lock",
+                    "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                    {
+                        "key_code": "left_command",
+                        "modifiers": ["left_control", "left_option"]
+                    }
+                ],
+                "type": "basic"
             }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "tab"
-            }
-          ],
-          "type": "basic"
-        }
-      ]
+        ]
     },
     {
-      "description": "Change Tab + P to backspace",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "p",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "fn"
-              ],
-              "optional":[
-                "any"
-              ]
-            }
-          },
-          "to": [
+        "description": "Change Hyper + N to Enter",
+        "manipulators": [
             {
-              "key_code": "delete_or_backspace"
+                "from": {
+                    "key_code": "n",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "return_or_enter" }],
+                "type": "basic"
             }
-          ],
-          "type": "basic"
-        }
-      ]
+        ]
     },
     {
-      "description": "Change Tab + [ to Escape",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "open_bracket",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "fn"
-              ],
-              "optional":[
-                "any"
-              ]
-            }
-          },
-          "to": [
+        "description": "Change Hyper + Y to backspace",
+        "manipulators": [
             {
-              "key_code": "escape"
+                "from": {
+                    "key_code": "y",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "delete_or_backspace" }],
+                "type": "basic"
             }
-          ],
-          "type": "basic"
-        }
-      ]
+        ]
     },
     {
-      "description": "Change Tab + H/J/K/L to Arrow Keys",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "h",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "fn"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
+        "description": "Change Hyper + E to Escape",
+        "manipulators": [
             {
-              "key_code": "left_arrow"
+                "from": {
+                    "key_code": "e",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "escape" }],
+                "type": "basic"
             }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "fn"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
+        ]
+    },
+    {
+        "description": "Change Hyper + H/J/K/L to Arrow Keys",
+        "manipulators": [
             {
-              "key_code": "down_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "k",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "fn"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
+                "from": {
+                    "key_code": "h",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "left_arrow" }],
+                "type": "basic"
+            },
             {
-              "key_code": "up_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "option",
-                "fn"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
+                "from": {
+                    "key_code": "j",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "down_arrow" }],
+                "type": "basic"
+            },
             {
-              "key_code": "right_arrow"
+                "from": {
+                    "key_code": "k",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "up_arrow" }],
+                "type": "basic"
+            },
+            {
+                "from": {
+                    "key_code": "l",
+                    "modifiers": {
+                        "mandatory": ["left_command", "left_control", "left_option"],
+                        "optional": ["any"]
+                    }
+                },
+                "to": [{ "key_code": "right_arrow" }],
+                "type": "basic"
             }
-          ],
-          "type": "basic"
-        }
-      ]
+        ]
     }
   ]
 }
