@@ -5,8 +5,6 @@ spoon.ShiftIt:setWindowCyclingSizes({ 50, 33, 67 }, { 50 })
 local hyper = {"ctrl", "alt", "cmd"}
 local hyper_shift = {table.unpack(hyper)}
 table.insert(hyper_shift, "shift")
-print(table.unpack(hyper))
-print(table.unpack(hyper_shift))
 
 -- https://github.com/msolomon/griddle
 hs.loadSpoon("Griddle")
