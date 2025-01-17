@@ -1,0 +1,9 @@
+don't forget to enable skin via ~/.config/k9s/config.yaml:
+```
+k9s:
+  ...
+  ui:
+    ...
+    skin: transparent
+  ...
+```
